@@ -1,0 +1,40 @@
+<script>
+    
+"use strict"
+function person(nm,ag)
+{
+ if(this instanceof person)
+ {
+  this.name=nm;
+  this.age=ag;
+  this.speak=function(){return "hello"}
+  alert(this)
+ return this;
+ }
+else 
+throw new TypeError("Check this is not a function");
+}
+person.prototype.display=function(){ return "parent classmethod data"; }
+// person.prototype.toString=function(){
+// return this.name+ "  "+this.age
+// }
+
+var obj1=new person("raj",80);
+console.log(obj1);
+document.write(obj1);
+var x=new person("mona",90);
+console.log(x);
+document.write(x);
+
+//child class
+function child()
+{
+}
+child.prototype=Object.create(person.prototype);
+var c=new child(); //child got access to parent method
+console.log(c.display());
+document.write(c);
+document.write(c.display());
+
+
+</script>

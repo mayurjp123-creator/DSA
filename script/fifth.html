@@ -1,0 +1,20 @@
+<script>
+    obj={
+        Name:"abhi",
+        Roll_no: 12,
+        mks1: 21,
+        mks2: 22,
+        Total:function(){
+        return this.mks1+ this.mks2
+        },
+        toString:function()
+        {return this.Total()+" "+this.Roll_no+" "+this.Name}
+    }
+    var f=obj.Total();
+    document.write("<hr/>");
+    document.write(f);
+    document.write("<hr/>");
+    document.write(obj);
+    document.write("<hr/>");
+    document.write(obj.toString());
+</script>

@@ -1,0 +1,40 @@
+
+<script>
+
+function person(nm,mks)
+{
+     alert(this)//it will display  Window[native code]
+    this.name=nm
+    this.marks=mks
+ }
+//  var obj=new person("mona",97);
+// person("raj",30);
+// console.log(window.name);
+// console.log(obj);
+
+
+//object iterating
+// var ob=new person("mona",80);// control will go to function
+// // document.write(ob); //object Object
+document.write(ob.constructor); //function Person
+// document.write("<hr/>")
+// // document.write(ob.name+" "+ob["name"])
+// document.write("<hr/>")
+// for(let pp in ob)
+// document.write(pp+"  "+ob[pp]);
+// document.write("<hr/>")
+// document.write(ob instanceof person);//true
+// document.write(ob instanceof Object);//true
+// var ob1=new person("Geeta",900);
+// document.write(person.length)
+
+
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+documant.write(target);// Expected output: Object { a: 1, b: 4, c: 5 }
+
+ document.write(returnedTarget === target);// Expected output: true
+
+</script>
